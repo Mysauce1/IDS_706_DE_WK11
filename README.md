@@ -39,6 +39,7 @@ Due to the size of the files, it's easier to access them from Kaggle than in thi
 
 
 Here is an overview of the pipeline’s performance and how Spark optimized it. It pushed filters such as the year and payment method filters down to the file scan level so that only the necessary rows were read from the CSV files. It also pruned unused columns, meaning it only loaded the data actually needed for the joins and aggregations. The data was converted to a columnar format for faster processing. These steps reduced memory use and improved overall performance.
+
 Even with these optimizations, most of the runtime was spent on shuffle and join operations. In Query 1, about 51% of the total time came from shuffle stages, while joins took around 38%. In the Query 2, shuffles took up to 1.85 seconds, which was longer compared to the first query. These slowdowns happened because large datasets needed to be redistributed across nodes for the joins and group-by steps. To make the pipeline faster for the queries, I applied filters early in the pipeline, and I included partitions based on the columns that were filtered or grouped in the queries. The goal behind this was to reduce the amount of data the pipeline had to process at a given time.
 
 
