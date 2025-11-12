@@ -14,6 +14,8 @@ The data used for this project is a synthetic e-commerce dataset from Kaggle. Th
 
 The data can be found here: https://www.kaggle.com/datasets/naelaqel/synthetic-e-commerce-relational-dataset
 
+Due to the size of the files, it's easier to access them from Kaggle than in this repository.
+
 ## Performance Analysis
 
 ### Query 1 Performance
