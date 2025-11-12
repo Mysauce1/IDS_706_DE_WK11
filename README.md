@@ -4,7 +4,7 @@
 
 This project is dedicated to exploring how to process data and evaluate the performance of the data processing using Pyspark and Databricks
 
-## Dataset
+## Data
 The data used for this project is a synthetic e-commerce dataset from Kaggle. The data is organized in 5 related tables, including:
 - customers: General customer information, such as customer name and email
 - orders: Information about the order, such as payment method and shipping country
